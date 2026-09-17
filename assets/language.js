@@ -11,10 +11,10 @@
     '.intro-title': ['你好，我是 wfs。'],
     '.lead': ['探索深度学习、<br class="desktop-break">多模态理解与计算机视觉。'],
     '#about > p:not([class])': [
-      '我是一名深度学习爱好者和网络安全工程师，目前在<strong>武汉大学</strong>和 <strong>IAIS (CUPES)</strong>。我的兴趣包括多模态学习、计算机视觉、操作系统和汇编语言。',
-      '我的研究涉及细粒度微动作理解、花样滑冰评估和能量消耗估计。我也热衷于参加人工智能竞赛，探索真实场景中的问题。'
+      '我是一名深度学习爱好者和网络安全工程师，目前在读<strong>武汉大学</strong>博士一年级，导师为涂志刚教授，我毕业于 <strong>IAIS (CUPES)</strong>。我的兴趣包括多模态大模型、计算机视觉、操作系统和汇编语言。',
+      '我的研究涉及多模态学习、细粒度微动作理解、动作质量评估。我也热衷于参加人工智能竞赛，探索真实场景中的问题。'
     ],
-    '.topics span': ['多模态学习', '计算机视觉', '动作理解', '网络安全'],
+    '.topics span': ['多模态大模型', '计算机视觉', '行为理解', '网络安全'],
     '.collaboration': ['欢迎合作，交流各领域科研与竞赛。'],
     '.section-heading h2': ['学术论文', '竞赛荣誉', '科研之外', '联系我'],
     '.section-heading > span': ['01 / 学术研究', '02 / 算法竞赛', '03 / 个人兴趣', '04 / 联系方式'],
@@ -26,8 +26,8 @@
     ],
     '.honors .award': ['冠军', '冠军', '亚军', '亚军', '二等奖', '第 5 名', '第 9 名', '第 9 名', '第 15 名'],
     '.honors h3': [
-      'ACM MM 2026 微动作竞赛',
-      '2025 行业数据应用大模型挑战赛',
+      'ACM MM 2026 微动作识别竞赛',
+      '2025 智源行业数据应用大模型挑战赛',
       '2025 全球 AI 攻防挑战赛',
       '2024 Data-Juicer 系列：ModelScope-Sora 挑战赛',
       '“睿创杯”竞赛',
@@ -51,7 +51,7 @@
     '.small-heading': ['编程语言与工具'],
     '#contact > p': ['如果你希望开展科研合作或组队参加人工智能竞赛，欢迎与我联系。'],
     '.contact-list dt': ['邮箱', '微信', 'GitHub'],
-    'footer > span:last-child': ['基于 <a href="https://github.com/pages-themes/minimal">Minimal</a> · <a href="#about">返回顶部 ↑</a>']
+    'footer > span:last-child': ['wfs · <a href="#about">返回顶部 ↑</a>']
   };
   const translations = Object.entries(chinese).flatMap(([selector, values]) =>
     Array.from(document.querySelectorAll(selector), (element, index) => ({
