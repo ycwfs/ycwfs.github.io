@@ -19,11 +19,13 @@
     '.section-heading h2': ['学术论文', '竞赛荣誉', '科研之外', '联系我'],
     '.section-heading > span': ['01 / 学术研究', '02 / 算法竞赛', '03 / 个人兴趣', '04 / 联系方式'],
     '.publications h3': [
+      '面向时序动作定位的掩码扩散视觉语言模型',
       '识别条件推理：面向细粒度微动作理解的免训练多模态大语言模型流程',
       '通过双流 Mamba 金字塔网络学习长程动作表征，用于花样滑冰评估',
       '基于体能特征的能量消耗估计：交叉注意力时空卷积神经网络',
       '从节拍到评分：面向花样滑冰综合评估的多模态框架'
     ],
+    '.paper-meta a': ['论文 ↗', '论文 ↗', '论文 ↗'],
     '.honors .award': ['冠军', '冠军', '亚军', '亚军', '二等奖', '第 5 名', '第 9 名', '第 9 名', '第 15 名'],
     '.honors h3': [
       'ACM MM 2026 微动作识别竞赛',
@@ -74,6 +76,13 @@
     description.content = isChinese ? 'wfs 的个人主页：深度学习、多模态理解、计算机视觉与网络安全。学术论文、竞赛荣誉与联系方式。' : englishDescription;
     document.querySelector('nav').ariaLabel = isChinese ? '主导航' : 'Main navigation';
     document.querySelector('.topics').ariaLabel = isChinese ? '研究兴趣' : 'Research interests';
+    const themeLabels = isChinese
+      ? {system: '跟随系统主题', light: '亮色主题', dark: '暗色主题'}
+      : {system: 'Follow system theme', light: 'Light theme', dark: 'Dark theme'};
+    document.querySelectorAll('[data-theme-mode]').forEach(button => {
+      button.ariaLabel = themeLabels[button.dataset.themeMode];
+      button.title = themeLabels[button.dataset.themeMode];
+    });
     switcher.querySelectorAll('button').forEach(button => {
       button.setAttribute('aria-pressed', String(button.dataset.language === language));
     });

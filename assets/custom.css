@@ -8,9 +8,10 @@ a:hover { color:var(--hover); text-decoration:underline; }
 a:focus-visible { outline:2px solid var(--blue); outline-offset:5px; }
 .wrapper { width:1060px; max-width:100%; display:grid; grid-template-columns:240px minmax(0,1fr); gap:88px; margin:auto; }
 .profile { position:sticky; top:40px; align-self:start; float:none; width:auto; padding:0; }
-.language-switch { display:flex; width:fit-content; gap:2px; padding:3px; margin-bottom:24px; border:1px solid var(--line); border-radius:5px; background:var(--surface); }
+.profile-controls { display:flex; align-items:center; gap:8px; margin-bottom:24px; }
+.language-switch { display:flex; flex-shrink:0; width:fit-content; gap:2px; padding:3px; border:1px solid var(--line); border-radius:5px; background:var(--surface); }
 .language-switch[hidden] { display:none; }
-.language-switch button { border:0; border-radius:3px; padding:6px 12px; background:transparent; color:var(--muted); font:12px/1.5 "Segoe UI", "Microsoft YaHei", sans-serif; cursor:pointer; }
+.language-switch button { border:0; border-radius:3px; padding:6px 5px; background:transparent; color:var(--muted); font:12px/1.5 "Segoe UI", "Microsoft YaHei", sans-serif; cursor:pointer; }
 .language-switch button[aria-pressed="true"] { background:var(--blue); color:var(--selected); }
 .language-switch button:focus-visible { outline:2px solid var(--blue); outline-offset:3px; }
 html[lang="zh-CN"] .intro-title, html[lang="zh-CN"] .section-heading h2 { font-family:Georgia,"Songti SC","SimSun",serif; }
@@ -45,6 +46,7 @@ strong { font-weight:600; }
 .venue { color:var(--blue); font-weight:700; letter-spacing:.3px; }
 h3 { font-size:15px; font-weight:600; line-height:1.55; margin:0; color:var(--ink); }
 .paper-note { color:var(--muted); font-size:11px; margin:5px 0 0; }
+.paper-authors { color:var(--secondary); font-size:12px; line-height:1.65; margin:6px 0 0; }
 .honors { list-style:none; padding:0; margin:0; }
 .honors li { display:grid; grid-template-columns:92px minmax(0,1fr); gap:17px; margin-bottom:22px; align-items:start; }
 .award { font-size:11px; color:var(--secondary); background:var(--surface); padding:3px 5px; text-align:center; border-radius:3px; margin-top:2px; }
@@ -71,15 +73,13 @@ footer { width:auto; position:static; float:none; display:flex; justify-content:
 :root[data-theme="dark"] { color-scheme:dark; --ink:#e3e9ee; --muted:#a5b2be; --blue:#8dc8e8; --line:#36424e; --bg:#171c22; --surface:#242e38; --secondary:#bdcbd6; --hover:#b4e1fa; --selected:#15232d; --gold:#e6c779; --gold-bg:#352e20; }
 @media (prefers-color-scheme:dark) { :root:not([data-theme]) { color-scheme:dark; --ink:#e3e9ee; --muted:#a5b2be; --blue:#8dc8e8; --line:#36424e; --bg:#171c22; --surface:#242e38; --secondary:#bdcbd6; --hover:#b4e1fa; --selected:#15232d; --gold:#e6c779; --gold-bg:#352e20; } }
 h1, h2, strong { color:var(--ink); }
-.language-switch { margin-bottom:10px; }
-.theme-switch { display:flex; width:fit-content; max-width:100%; gap:2px; padding:3px; margin-bottom:24px; border:1px solid var(--line); border-radius:5px; background:var(--surface); }
+.theme-switch { display:flex; flex-shrink:0; width:fit-content; gap:2px; padding:3px; border:1px solid var(--line); border-radius:5px; background:var(--surface); }
 .theme-switch[hidden] { display:none; }
-.theme-switch button { border:0; border-radius:3px; padding:6px 10px; background:transparent; color:var(--muted); font:12px/1.5 "Segoe UI","Microsoft YaHei",sans-serif; cursor:pointer; }
+.theme-switch button { display:grid; place-items:center; width:28px; height:30px; border:0; border-radius:3px; padding:0; background:transparent; color:var(--muted); cursor:pointer; }
+.theme-switch svg { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; pointer-events:none; }
 .theme-switch button[aria-pressed="true"] { background:var(--blue); color:var(--selected); }
 .theme-switch button:focus-visible { outline:2px solid var(--blue); outline-offset:3px; }
-.label-zh, html[lang="zh-CN"] .label-en { display:none; }
-html[lang="zh-CN"] .label-zh { display:inline; }
 @media print {
   :root, :root[data-theme] { color-scheme:light; --ink:#252d35; --muted:#67727c; --blue:#23678a; --line:#e5e9ec; --bg:#ffffff; --surface:#f4f7f8; --secondary:#4e5a65; --gold:#836122; --gold-bg:#faf4e6; }
-  .theme-switch { display:none; }
+  .profile-controls { display:none; }
 }

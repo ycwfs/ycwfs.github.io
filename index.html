@@ -16,14 +16,16 @@
   <div class="wrapper">
     <!-- PROFILE: portrait.jpg is a cropped copy of the original big-head.jpg. -->
     <header class="profile">
+      <div class="profile-controls">
       <div class="language-switch" role="group" aria-label="Language / 语言" hidden>
         <button type="button" data-language="zh-CN" lang="zh-CN" aria-pressed="false">中文</button>
         <button type="button" data-language="en" lang="en" aria-pressed="true">English</button>
       </div>
       <div class="theme-switch" role="group" aria-label="Appearance / 外观" hidden>
-        <button type="button" data-theme-mode="system" aria-pressed="true"><span class="label-en">Auto</span><span class="label-zh">跟随系统</span></button>
-        <button type="button" data-theme-mode="light" aria-pressed="false"><span class="label-en">Light</span><span class="label-zh">亮色</span></button>
-        <button type="button" data-theme-mode="dark" aria-pressed="false"><span class="label-en">Dark</span><span class="label-zh">暗色</span></button>
+        <button type="button" data-theme-mode="system" aria-pressed="true" aria-label="Follow system theme" title="Follow system theme"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></button>
+        <button type="button" data-theme-mode="light" aria-pressed="false" aria-label="Light theme" title="Light theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button>
+        <button type="button" data-theme-mode="dark" aria-pressed="false" aria-label="Dark theme" title="Dark theme"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14A9 9 0 0 1 10 3.5 9 9 0 1 0 20.5 14Z"/></svg></button>
+      </div>
       </div>
       <img class="portrait" src="assets/portrait.jpg" alt="wfs" width="160" height="160">
       <h1>wfs<span class="name-dot">.</span></h1>
@@ -58,15 +60,16 @@
         <p class="collaboration">Open to research collaborations and competition teams.<br><span lang="zh-CN">欢迎合作，交流各领域科研与竞赛。</span></p>
       </section>
 
-      <!-- PUBLICATIONS: titles and venue information come from the profile README.
-           Add author lists, paper URLs, and code links here when available. -->
+      <!-- PUBLICATIONS: keep translated titles in assets/language.js in the same order.
+           The 2026 entries are supplied by the author; add a public URL when available. -->
       <section id="publications">
         <div class="section-heading"><h2>Publications</h2><span>01 / RESEARCH</span></div>
         <ol class="publications">
+          <li><div class="paper-meta"><span class="venue">NeurIPS 2026</span><span>CCF A</span></div><h3>Masked Diffusion Vision-Language Models for Temporal Action Localization</h3><p class="paper-authors"><strong>Fengshun Wang</strong>, Zhengbo Zhang, Zhigang Tu</p></li>
           <li><div class="paper-meta"><span class="venue">ACM MM 2026</span><span>CCF A</span></div><h3>Recognition-Conditioned Reasoning: A Training-Free Multimodal-LLM Pipeline for Fine-Grained Micro-Action Understanding</h3></li>
-          <li><div class="paper-meta"><span class="venue">ACM MM 2025</span><span>CCF A</span></div><h3>Learning Long-Range Action Representation by Two-Stream Mamba Pyramid Network for Figure Skating Assessment</h3></li>
-          <li><div class="paper-meta"><span class="venue">Defence Technology</span><span>JCR Q1 · IF 5.9</span></div><h3>Cross-attention spatial–temporal convolutional neural network for energy expenditure estimation on the basis of physical fitness characteristics</h3><p class="paper-note" lang="zh-CN">中科院一区 TOP</p></li>
-          <li><div class="paper-meta"><span class="venue">CVPR 2024 workshop</span></div><h3>From Beats to Scores: A Multi-Modal Framework for Comprehensive Figure Skating Assessment</h3></li>
+          <li><div class="paper-meta"><span class="venue">ACM MM 2025</span><span>CCF A</span><a href="https://doi.org/10.1145/3746027.3754702">Paper ↗</a></div><h3>Learning Long-Range Action Representation by Two-Stream Mamba Pyramid Network for Figure Skating Assessment</h3><p class="paper-authors"><strong>Fengshun Wang</strong>, Qiurui Wang, Peilin Zhao</p></li>
+          <li><div class="paper-meta"><span class="venue">Defence Technology</span><span>JCR Q1 · IF 5.9</span><a href="https://doi.org/10.1016/j.dt.2025.06.009">Paper ↗</a></div><h3>Cross-attention spatial–temporal convolutional neural network for energy expenditure estimation on the basis of physical fitness characteristics</h3><p class="paper-authors">Qiurui Wang, <strong>Fengshun Wang</strong>, Yuting Wang, Shanjun Li</p><p class="paper-note" lang="zh-CN">中科院一区 TOP</p></li>
+          <li><div class="paper-meta"><span class="venue">CVPR 2025 Workshops</span><a href="https://openaccess.thecvf.com/content/CVPR2025W/CVSPORTS/html/Wang_From_Beats_to_Scores_A_Multi-Modal_Framework_for_Comprehensive_Figure_CVPRW_2025_paper.html">Paper ↗</a></div><h3>From Beats to Scores: A Multi-Modal Framework for Comprehensive Figure Skating Assessment</h3><p class="paper-authors"><strong>Fengshun Wang</strong>, Qiurui Wang, Dan Chen</p></li>
         </ol>
       </section>
 
