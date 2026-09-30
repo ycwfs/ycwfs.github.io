@@ -7,6 +7,8 @@
     '.affiliation': ['武汉大学<br>IAIS (CUPES)'],
     'nav a': ['关于我', '学术论文', '竞赛荣誉', '科研之外', '联系我'],
     '.sidebar-note': ['科研 · 工程 · 运动'],
+    '#visitor-title': ['全球访客足迹'],
+    '.visitor-caption': ['浏览次数与访客国家 / 地区 · Flag Counter'],
     '.eyebrow': ['个人主页'],
     '.intro-title': ['你好，我是 wfs。'],
     '.lead': ['探索深度学习、<br class="desktop-break">多模态理解与计算机视觉。'],
@@ -77,6 +79,7 @@
     description.content = isChinese ? 'wfs 的个人主页：深度学习、多模态理解、计算机视觉与网络安全。学术论文、竞赛荣誉与联系方式。' : englishDescription;
     document.querySelector('nav').ariaLabel = isChinese ? '主导航' : 'Main navigation';
     document.querySelector('.topics').ariaLabel = isChinese ? '研究兴趣' : 'Research interests';
+    document.querySelector('#visitor-map-image').alt = isChinese ? '访客来源国家 / 地区地图及浏览次数' : 'World map of visitor countries and pageview count';
     const themeLabels = isChinese
       ? {system: '跟随系统主题', light: '亮色主题', dark: '暗色主题'}
       : {system: 'Follow system theme', light: 'Light theme', dark: 'Dark theme'};

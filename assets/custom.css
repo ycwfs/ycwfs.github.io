@@ -24,6 +24,17 @@ h1 { margin:0; font:600 43px/1.12 Georgia,serif; letter-spacing:-1.5px; }
 .affiliation { color:var(--muted); font-size:14px; }
 .profile-links { display:grid; gap:5px; font-size:13px; }
 .profile-links span { padding-left:3px; }
+.visitor-stats { clear:both; margin-top:19px; max-width:250px; }
+.visitor-stats h2 { font:600 11px/1.5 "Segoe UI","Microsoft YaHei",sans-serif; color:var(--secondary); margin:0 0 9px; }
+.visitor-map { display:block; border:1px solid var(--line); border-radius:5px; overflow:hidden; background:var(--surface); }
+.visitor-map img { display:block; width:100%; height:auto; background:#fff; }
+.visitor-map [hidden] { display:none; }
+.visitor-placeholder,.visitor-error { display:grid; min-height:112px; align-content:center; padding:16px; font-size:12px; text-align:center; }
+.visitor-stats [lang="zh-CN"],html[lang="zh-CN"] .visitor-stats [lang="en"] { display:none; }
+html[lang="zh-CN"] .visitor-stats [lang="zh-CN"] { display:inline; }
+.visitor-caption { font-size:10px; line-height:1.6; color:var(--muted); margin:7px 0 0; }
+@media (min-width:681px) { .profile { max-height:calc(100dvh - 64px); overflow-y:auto; scrollbar-width:thin; scrollbar-color:var(--line) transparent; } .profile-controls { gap:4px; } .language-switch button { padding-inline:3px; } }
+@media print { .visitor-stats { display:none; } .profile { max-height:none; overflow:visible; } }
 nav { display:grid; gap:6px; border-top:1px solid var(--line); margin-top:27px; padding-top:23px; }
 nav a { font-size:14px; width:fit-content; color:var(--secondary); }
 .sidebar-note { font-size:11px; color:var(--muted); margin-top:28px; }
